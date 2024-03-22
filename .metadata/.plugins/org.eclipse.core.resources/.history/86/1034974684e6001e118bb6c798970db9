@@ -1,0 +1,9 @@
+package edu.kh.jdbc.phone.run;
+
+public class PhoneRun {
+
+	public PhoneRun() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

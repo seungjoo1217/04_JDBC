@@ -1,0 +1,15 @@
+package edu.kh.jdbc.common;
+
+public class JDBCTemplate {
+
+	/* DB 연결 (Connection 생성), JDBC 객체 자원 반환(close)
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * */
+	
+}

@@ -1,0 +1,12 @@
+package edu.kh.jdbc.phone.view;
+
+import edu.kh.jdbc.phone.model.service.PhoneService;
+
+public class PhoneView {
+
+	private PhoneService service = new PhoneService();
+	
+	public void mainMenu() {
+		
+	}
+}

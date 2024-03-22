@@ -1,0 +1,52 @@
+package edu.kh.emp.model.service;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+
+import static edu.kh.emp.common.JDBCTemplate.*;
+import edu.kh.emp.model.dao.EmployeeDAO;
+
+public class EmployeeService {
+
+
+	private EmployeeDAO dao = new EmployeeDAO();
+	
+	public ResultSet viewTable() {
+		Connection conn = getConnection();
+		return dao.viewTable(conn);
+		/*
+		try {
+			Connection conn = getConnection();
+			
+			ResultSet rs = dao.viewTable(conn);
+			
+			StringBuilder sb = null;
+			
+			while(rs.next()) {
+				int empId = rs.getInt("EMP_ID");
+				String empName = rs.getString("EMP_NAME");
+				String empNo = rs.getString("EMP_NO");
+				String email = rs.getString("EMAIL");
+				String phone = rs.getString("PHONE");
+				String deptCode = rs.getString("DEPT_CODE");
+				String jobCode = rs.getString("JOB_CODE");
+				String salLevel = rs.getString("SAL_LEVEL");
+				int salary = rs.getInt("SALARY");
+				
+				String st = String.format("%d / %s / %s / %s / %s / %s / %s / %s / %d\n",
+						empId, empName, empNo, email, phone, deptCode, jobCode, salLevel, salary);
+				
+				sb.append(st);
+				
+			}
+			
+			return sb.toString();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		*/
+		
+	}
+}

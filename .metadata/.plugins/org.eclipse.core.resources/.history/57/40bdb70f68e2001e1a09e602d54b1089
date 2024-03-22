@@ -1,0 +1,20 @@
+package edu.kh.emp.model.service;
+
+import java.util.List;
+
+import edu.kh.emp.model.dao.EmployeeDAO;
+import edu.kh.emp.model.vo.Employee;
+
+public class EmployeeService {
+
+	private EmployeeDAO dao = new EmployeeDAO();
+
+	/** 전체 사원 정보 조회 서비스
+	 * @return
+	 */
+	public List<Employee> selectAll() {
+		
+		return null;
+	}
+	
+}

@@ -1,0 +1,62 @@
+package edu.kh.jdbc.member.model.dao;
+
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
+import javax.naming.spi.DirStateFactory.Result;
+
+public class MemberDAO {
+
+	// JDBC 객체 참조 변수
+	private Statement stmt;
+	private PreparedStatement pstmt;
+	private Result rs;
+	
+	private Properties prop;
+	
+	// 기본생성자 member-sql.xml 읽어오고 prop 저장
+	public MemberDAO() {
+		
+		try {
+			prop = new Properties();
+			prop.loadFromXML(new FileInputStream("member-sql.xml"));
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public List<String> selectMemberList(Connection conn) throws Exception {
+		List<String> memberList = new ArrayList<String>();
+		
+		try {
+			
+			String sql = prop.getProperty("selectMemberList");
+			
+			stmt = conn.createStatement();
+			
+			rs = stmt.executeQuery(sql);
+			
+			
+		} finally {
+			
+		}
+		
+		return null;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

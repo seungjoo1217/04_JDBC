@@ -1,0 +1,37 @@
+package edu.kh.jdbc.phone.model.dao;
+
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.List;
+import java.util.Properties;
+
+import edu.kh.jdbc.phone.model.dto.Phone;
+
+public class PhoneDAO {
+	private Statement stmt;
+	private PreparedStatement pstmt;
+	private ResultSet rs;
+	
+	private Properties prop;
+	
+	public PhoneDAO() {
+		
+		try {
+			prop = new Properties();
+			
+			prop.loadFromXML(new FileInputStream("phone-sql.xml"));
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public List<Phone> viewPhone(Connection conn) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package edu.kh.jdbc.phone.model.dto;
+
+public class Phone {
+
+}

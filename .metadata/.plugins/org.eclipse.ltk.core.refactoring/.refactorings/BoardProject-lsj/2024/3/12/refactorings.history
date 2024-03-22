@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;PhoneProject/src/edu.kh.jdbc.common&apos;&#x0D;&#x0A;- Original project: &apos;BoardProject-lsj&apos;&#x0D;&#x0A;- Destination element: &apos;PhoneProject/src/edu.kh.jdbc.common&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     edu.kh.jdbc.common.JDBCTemplate.java&#x0D;&#x0A;     edu.kh.jdbc.common.CreateXMLFile.java" description="Copy compilation units" destination="=PhoneProject/src&lt;edu.kh.jdbc.common" element1="/src&lt;edu.kh.jdbc.common{JDBCTemplate.java" element2="/src&lt;edu.kh.jdbc.common{CreateXMLFile.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1710916535310" units="2" version="1.0"/>
+</session>

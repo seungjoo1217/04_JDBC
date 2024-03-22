@@ -1,0 +1,162 @@
+package edu.kh.jdbc.phone.view;
+
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Scanner;
+
+import edu.kh.jdbc.phone.model.dto.Phone;
+import edu.kh.jdbc.phone.model.service.PhoneService;
+
+public class PhoneView {
+	private Scanner sc = new Scanner(System.in);
+
+	private PhoneService service = new PhoneService();
+	
+	public void mainMenu() {
+		int input = 0;
+		
+		try {
+			do {
+				System.out.println("********* 연락처 메인메뉴 **********");
+				
+				System.out.println("\n1) 전화번호부 보기");
+				System.out.println("2) 전화번호 추가하기");
+				System.out.println("3) 정보 수정하기");
+				System.out.println("4) 전화번호 삭제하기");
+				System.out.println("0) 전화번호부 종료");
+				
+				System.out.print("선택 >> ");
+				input = sc.nextInt();
+				
+				switch(input) {
+				case 1: viewPhone(); break;
+				case 2: addPhone(); break;
+				case 3: updatePhone(); break;
+				case 4: //deletePhone(); break;
+				case 0: System.out.println("\n*************** 종료 ***************\n"); break;
+				default: System.out.println("\n*** 잘못 입력하셨습니다 ***\n");
+				}
+				
+			} while(input != 0);
+			
+		} catch(InputMismatchException e) {
+			System.out.println("\n*** 올바른 형식이 아닙니다 ***\n");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+
+	/**
+	 * 전체 전화번호부 표시 메서드
+	 * @throws Exception 
+	 */
+	private void viewPhone() throws Exception {
+		System.out.println("\n======= 전화번호부 =======\n");
+		
+		List<Phone> phoneList = service.viewPhone();
+		
+		if(phoneList == null) {
+			System.out.println("\n*** 전화번호부가 비었습니다 ***\n");
+			return;
+		}
+		
+		int i = 1;
+		for(Phone phone : phoneList) {
+			System.out.printf("[" + i + "] %14s\t%5s\t즐겨찾기 : %c\n", phone.getPhoneNo(), phone.getName(), phone.getFavorit());
+			i++;
+		}
+		
+		System.out.println();
+		System.out.println();
+	}
+	
+	
+	/** 전화번호부 추가 메서드
+	 * @throws Exception
+	 */
+	public void addPhone() throws Exception {
+		System.out.println("\n======= 전화번호부 추가 =======\n");
+		
+		System.out.print("추가할 전화번호부를 입력해주세요 : ");
+		String inputPhone = sc.next();
+		sc.nextLine();
+		
+		System.out.print("이름을 입력해주세요 : ");
+		String inputName = sc.nextLine();
+		
+		int result = service.addPhone(inputPhone, inputName);
+		
+		if(result > 0) {
+			System.out.println("\n====== 추가 성공 ======\n");
+		} else {
+			System.out.println("\n*** 추가 실패 ***\n");
+		}
+	}
+	
+	
+	
+	/** 정보 수정 메서드
+	 * @throws Exception
+	 */
+	public void  updatePhone() throws Exception {
+		System.out.println("\n======= 정보 수정 =======\n");
+		
+		viewPhone();
+		
+		System.out.print("정보를 수정할 연락처의 이름을 선택해 주세요 : ");
+		String inputName = sc.next();
+		
+		System.out.print("수정할 전화번호를 입력하세요 : ");
+		String inputPhoneNo = sc.next();
+		sc.nextLine();
+		
+		System.out.print("수정할 이름을 입력하세요 : ");
+		String inputNewName = sc.nextLine();
+		
+		
+		while(true) {
+			System.out.print("즐겨찾기에 추가하시겠습니까?(Y/N) : ");
+			String inputFavorit = sc.next().toUpperCase();
+			
+			if(inputFavorit.equals('Y') || inputFavorit.equals('N')) {
+				int result = service.updatePhone(inputName, inputPhoneNo, inputNewName, inputFavorit);
+				
+				if(result > 0) {
+					System.out.println("\n====== 수정 성공 ======\n");
+				} else {
+					System.out.println("\n*** 수정 실패 ***\n");
+				}
+				return;
+				
+			} else {
+				System.out.println("\n*** 잘못된 입력 형식입니다 ***\n");
+			}
+			
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,25 @@
+package edu.kh.emp.model.service;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+
+import static edu.kh.emp.common.JDBCTemplate.*;
+import edu.kh.emp.model.dao.EmployeeDAO;
+
+public class EmployeeService {
+
+
+	private EmployeeDAO dao = new EmployeeDAO();
+	
+	public String viewTable() {
+		Connection conn = getConnection();
+		String st = dao.viewTable(conn);
+		
+		if(st != null) commit(conn);
+		else			rollback(conn);
+		
+		close(conn);
+		
+		return st;
+	}
+}

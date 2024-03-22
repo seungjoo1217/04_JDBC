@@ -1,0 +1,23 @@
+package edu.kh.emp.common;
+
+import java.util.Properties;
+import java.util.Scanner;
+
+public class CreateXMLFile {
+
+	public static void main(String[] args) {
+		
+		try {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			Properties prop = new Properties();
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

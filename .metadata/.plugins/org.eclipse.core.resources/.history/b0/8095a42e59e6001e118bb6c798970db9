@@ -1,0 +1,42 @@
+package edu.kh.jdbc.board.model.service;
+
+import java.sql.Connection;
+
+import edu.kh.jdbc.board.model.dao.CommentDAO;
+import static edu.kh.jdbc.common.JDBCTemplate.*;
+
+public class CommentService {
+	
+	private CommentDAO dao = new CommentDAO();
+
+	/** 댓글 등록 서비스
+	 * @param boardNo
+	 * @param string
+	 * @param memberNo
+	 * @return result
+	 */
+	public int insertComment(int boardNo, String string, int memberNo) {
+		
+		Connection conn = getConnection();
+		
+		int result = dao.insertComment(conn);
+		
+		return 0;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

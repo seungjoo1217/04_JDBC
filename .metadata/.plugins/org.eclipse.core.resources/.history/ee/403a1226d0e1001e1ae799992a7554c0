@@ -1,0 +1,9 @@
+package edu.kh.emp.run;
+
+public class EmployeeRun {
+
+	public EmployeeRun() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

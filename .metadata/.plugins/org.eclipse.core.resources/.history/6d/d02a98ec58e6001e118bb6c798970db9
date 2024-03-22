@@ -1,0 +1,19 @@
+package edu.kh.jdbc.board.model.service;
+
+import edu.kh.jdbc.board.model.dao.CommentDAO;
+
+public class CommentService {
+	
+	private CommentDAO dao = new CommentDAO();
+
+	/** 댓글 등록 서비스
+	 * @param boardNo
+	 * @param string
+	 * @param memberNo
+	 * @return
+	 */
+	public int insertComment(int boardNo, String string, int memberNo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

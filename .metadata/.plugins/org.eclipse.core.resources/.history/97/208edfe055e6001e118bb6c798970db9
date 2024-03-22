@@ -1,0 +1,9 @@
+package edu.kh.jdbc.board.view;
+
+public class CommentView {
+
+	public CommentView() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

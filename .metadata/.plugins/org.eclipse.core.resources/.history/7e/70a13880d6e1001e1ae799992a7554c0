@@ -1,0 +1,12 @@
+package edu.kh.emp.view;
+
+import edu.kh.emp.model.service.EmployeeService;
+
+public class EmployeeView {
+	EmployeeService service = new EmployeeService();
+
+	public String viewTable() {
+		return service.viewTable();
+	}
+
+}

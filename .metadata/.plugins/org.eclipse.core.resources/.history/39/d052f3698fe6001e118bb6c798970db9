@@ -1,0 +1,39 @@
+package edu.kh.jdbc.phone.model.service;
+
+import java.sql.Connection;
+import java.util.List;
+
+import static edu.kh.jdbc.common.JDBCTemplate.*;
+
+import edu.kh.jdbc.phone.model.dao.PhoneDAO;
+import edu.kh.jdbc.phone.model.dto.Phone;
+
+public class PhoneService {
+	private PhoneDAO dao = new PhoneDAO();
+
+	/** 전체 전화번호부 표시 서비스
+	 * @return
+	 * @throws Exception 
+	 */
+	public List<Phone> viewPhone() throws Exception {
+
+		Connection conn = getConnection();
+		
+		List<Phone> phoneList = dao.viewPhone(conn);
+		
+		close(conn);
+		
+		return phoneList;
+	}
+
+	/** 전화번호 추가 서비스
+	 * @param inputPhone
+	 * @param inputName
+	 * @return
+	 */
+	public int addPhone(String inputPhone, String inputName) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

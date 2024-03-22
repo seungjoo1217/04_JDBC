@@ -1,0 +1,18 @@
+package edu.kh.jdbc.common;
+
+public class JDBCTemplate {
+
+	/* DB 연결 (Connection 생성) + 자동 커밋 off ,
+	 * JDBC 객체 자원 반환(close)
+	 * 트랜잭션 제어
+	 * 
+	 * 이러한 JDBC에서 반복 사용되는 코드를 모아둔 클래스
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * */
+	
+}

@@ -1,0 +1,9 @@
+package edu.kh.jdbc.phone.model.dao;
+
+public class PhoneDAO {
+
+	public PhoneDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

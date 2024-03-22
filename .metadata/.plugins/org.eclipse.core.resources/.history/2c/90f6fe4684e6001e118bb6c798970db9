@@ -1,0 +1,9 @@
+package edu.kh.jdbc.phone.view;
+
+public class PhoneView {
+
+	public PhoneView() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

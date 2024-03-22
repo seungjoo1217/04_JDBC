@@ -1,0 +1,22 @@
+package edu.kh.jdbc.phone.model.service;
+
+import java.sql.Connection;
+import java.util.List;
+
+import static edu.kh.jdbc.common.JDBCTemplate.*;
+import edu.kh.jdbc.phone.model.dto.Phone;
+
+public class PhoneService {
+
+	/** 전체 전화번호부 표시 서비스
+	 * @return
+	 */
+	public List<Phone> viewPhone() {
+
+		Connection conn = getConnection();
+		
+		
+		return null;
+	}
+
+}

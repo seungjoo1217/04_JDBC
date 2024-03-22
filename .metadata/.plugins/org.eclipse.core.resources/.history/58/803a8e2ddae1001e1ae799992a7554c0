@@ -1,0 +1,19 @@
+package edu.kh.emp.view;
+
+import java.sql.ResultSet;
+
+import edu.kh.emp.model.service.EmployeeService;
+
+public class EmployeeView {
+	EmployeeService service = new EmployeeService();
+
+	public void viewTable() {
+		String st =  service.viewTable();
+		
+		System.out.println(st);
+	}
+	
+	
+	
+
+}

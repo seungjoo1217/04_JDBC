@@ -1,0 +1,9 @@
+package edu.kh.emp.common;
+
+public class JDBCTeaplate {
+
+	public JDBCTeaplate() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

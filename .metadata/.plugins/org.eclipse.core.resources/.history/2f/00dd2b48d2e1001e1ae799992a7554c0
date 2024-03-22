@@ -1,0 +1,50 @@
+package edu.kh.emp.run;
+
+public class EmployeeRun {
+	
+
+	public static void main(String[] args) {
+		try {
+			System.out.println("******Employee Table*****");
+			System.out.println("1. 테이블 전체 보기");
+			System.out.println("2. 조회하기");
+			System.out.println("3. 추가하기");
+			System.out.println("4. 수정하기");
+			System.out.println("5. 삭제하기");
+			System.out.println("0. 종료하기");
+			
+			int menuNum = 0;
+			
+			do {
+				switch(menuNum) {
+				case 1 : /*viewTable;*/ break;
+				case 2 : /*search*/ break;
+				case 3 : /*add*/ break;
+				case 4 : /*alter*/ break;
+				case 5 : /*delete*/ break;
+				case 0 : System.out.println("[종료]"); break;
+				default : System.out.println("잘못 입력하셨습니다");
+				}
+			} while (menuNum != 0);
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
+	public void viewTable() {
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

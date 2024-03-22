@@ -1,0 +1,9 @@
+package edu.kh.emp.model.service;
+
+public class EmployeeService {
+
+	public EmployeeService() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

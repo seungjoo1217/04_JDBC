@@ -1,0 +1,14 @@
+package edu.kh.emp.run;
+
+public class EmployeeRun {
+
+	public static void main(String[] args) {
+		System.out.println("******Employee Table*****");
+		System.out.println("1. 테이블 전체 보기");
+		System.out.println("2. 조회하기");
+		System.out.println("3. 추가하기");
+		System.out.println("4. 수정하기");
+		System.out.println("5. 삭제하기");
+	}
+
+}

@@ -1,0 +1,8 @@
+package edu.kh.jdbc.member.model.sevice;
+
+import edu.kh.jdbc.member.model.dao.MemberDAO;
+
+public class MemberService {
+
+	private MemberDAO dao = new MemberDAO();
+}

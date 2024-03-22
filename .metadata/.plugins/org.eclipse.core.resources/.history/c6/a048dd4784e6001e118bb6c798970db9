@@ -1,0 +1,9 @@
+package edu.kh.jdbc.phone.model.dto;
+
+public class Phone {
+
+	public Phone() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

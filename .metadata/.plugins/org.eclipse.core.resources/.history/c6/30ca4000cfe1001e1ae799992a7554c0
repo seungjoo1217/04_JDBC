@@ -1,0 +1,9 @@
+package edu.kh.emp.common;
+
+public class JDBCTemplate {
+
+	public JDBCTemplate() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

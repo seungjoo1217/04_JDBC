@@ -1,0 +1,9 @@
+package edu.kh.jdbc.board.model.service;
+
+public class CommentService {
+
+	public CommentService() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,25 @@
+package edu.kh.jdbc.model.dao;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Properties;
+
+public class TestDao {
+	// DAO (Data Access Object) : 데이터가 저장된 DB에 접근하는 객체
+	//				-> SQL 수행, 결과 반환 받는 기능을 수행
+	
+	// JDBC 객체를 참조하기 위한 참조변수 선언
+	private Statement stmt;
+	private PreparedStatement pstmt;
+	private ResultSet rs;
+	
+	// xml로 SQL을 다룰것이다 -> Properties 객체 사용
+	private Properties prop;
+	
+	
+	
+	
+	
+
+}

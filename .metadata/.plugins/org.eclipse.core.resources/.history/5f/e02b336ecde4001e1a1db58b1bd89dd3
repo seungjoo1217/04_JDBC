@@ -1,0 +1,15 @@
+package edu.kh.jdbc.main.model.service;
+
+import edu.kh.jdbc.main.model.dao.MainDAO;
+import edu.kh.jdbc.member.model.dto.Member;
+
+public class MainService {
+	
+	private MainDAO dao = new MainDAO();
+
+	public Member login(String memberId, String memberPw) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

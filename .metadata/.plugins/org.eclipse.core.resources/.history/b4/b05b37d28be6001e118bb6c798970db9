@@ -1,0 +1,15 @@
+package edu.kh.jdbc.phone.model.dao;
+
+import java.sql.Connection;
+import java.util.List;
+
+import edu.kh.jdbc.phone.model.dto.Phone;
+
+public class PhoneDAO {
+
+	public List<Phone> viewPhone(Connection conn) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

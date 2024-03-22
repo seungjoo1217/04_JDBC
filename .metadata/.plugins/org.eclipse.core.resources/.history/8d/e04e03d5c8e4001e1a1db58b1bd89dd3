@@ -1,0 +1,9 @@
+package edu.kh.jdbc.main.run;
+
+public class MainRun {
+	public static void main(String[] args) {
+		
+		// mainView의 mainMenu 호출
+		new MainView().mainMenu();
+	}
+}

@@ -1,0 +1,28 @@
+package edu.kh.jdbc.phone.view;
+
+import java.util.Scanner;
+
+import edu.kh.jdbc.phone.model.service.PhoneService;
+
+public class PhoneView {
+	private Scanner sc = new Scanner(System.in);
+
+	private PhoneService service = new PhoneService();
+	
+	public void mainMenu() {
+		int input = 0;
+		
+		do {
+			System.out.println("************ 전화번호부 *************");
+			
+			System.out.println("\n1) 전화번호부 보기");
+			System.out.println("2) 전화번호 추가하기");
+			System.out.println("3) 정보 수정하기");
+			System.out.println("4) 전화번호 삭제하기");
+			System.out.println("0) 전화번호부 종료");
+			
+		} while(input != 0);
+		
+		
+	}
+}

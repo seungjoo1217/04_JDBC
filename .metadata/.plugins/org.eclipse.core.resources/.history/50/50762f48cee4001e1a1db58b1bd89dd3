@@ -1,0 +1,77 @@
+package edu.kh.jdbc.main.model.dao;
+
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Properties;
+
+import edu.kh.jdbc.member.model.dto.Member;
+
+public class MainDAO {
+
+	// JDBC 객체 참조 변수
+	private Statement stmt; // SQL 수행, 결과 반환
+	private PreparedStatement pstmt; // placeholder(위치홀더:?)를 포함한 SQL 세팅/수행/결과반환
+	private ResultSet rs ; // SELECT 수행 결과 저장
+	
+	private Properties prop;
+	
+	
+	// 기본생성자 DAO 객체가 생성될 때 xml 파일 읽어와 Properties 객체 저장
+	public MainDAO() {
+		
+		try {
+			prop = new Properties();
+			prop.loadFromXML(new FileInputStream("main-sql.xml"));
+			// -> Properties 객체에
+			//	  key:value 형식으로 xml 내용이 저장됨
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	/** 로그인 DAO (아이디, 비밀번호 일치 회원 조회)
+	 * @param conn
+	 * @param memberId
+	 * @param memberPw
+	 * @return member
+	 */
+	public Member login(Connection conn, String memberId, String memberPw) {
+		
+		// 1. 결과 저장용 변수 생성
+		Member member = null;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		return null;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

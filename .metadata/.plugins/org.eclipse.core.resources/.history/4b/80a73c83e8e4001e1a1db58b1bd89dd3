@@ -1,0 +1,8 @@
+package edu.kh.jdbc.member.model.dao;
+
+public class MemberDAO {
+
+	// JDBC 객체 참조 변수
+	
+	// 기본생성자 member-sql.xml 읽어오고 prop 저장
+}

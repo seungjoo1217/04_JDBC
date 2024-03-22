@@ -1,0 +1,8 @@
+package edu.kh.jdbc.main.model.dao;
+
+public class MainDAO {
+
+	// JDBC 개겣 참조 변수
+	
+	// 기본생성자 DAO 객체가 생성될 때 xml 파일 읽어와 Properties 객체 저장
+}
